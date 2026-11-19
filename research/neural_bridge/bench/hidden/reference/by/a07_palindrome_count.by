@@ -1,0 +1,23 @@
+module solution;
+
+fn reverse(n: i32) -> i32 {
+    let mut r: i32 = 0;
+    let mut x: i32 = n;
+    while x > 0 {
+        r = r * 10 + x % 10;
+        x = x / 10;
+    }
+    return r;
+}
+
+fn solve(n: i32) -> i32 {
+    let mut count: i32 = 0;
+    let mut k: i32 = 1;
+    while k <= n {
+        if reverse(k) == k {
+            count = count + 1;
+        }
+        k = k + 1;
+    }
+    return count;
+}

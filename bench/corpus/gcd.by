@@ -1,0 +1,22 @@
+module gcd;
+
+fn gcd(a: i64, b: i64) -> i64 {
+    let mut x: i64 = a;
+    let mut y: i64 = b;
+    while y != 0 {
+        let t: i64 = x % y;
+        x = y;
+        y = t;
+    }
+    return x;
+}
+
+fn lcm(a: i64, b: i64) -> i64 {
+    return a / gcd(a, b) * b;
+}
+
+fn main() -> i32 {
+    let g: i64 = gcd(1071, 462);
+    let l: i64 = lcm(21, 6);
+    return (g + l) as i32;
+}

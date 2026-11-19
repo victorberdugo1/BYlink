@@ -1,0 +1,26 @@
+byai 1
+module solution
+fn is_prime n:i32 > bool
+if lt n 2
+ret false
+end
+mut d i32 2
+while le mul d d n
+if eq rem n d 0
+ret false
+end
+set d add d 1
+end
+ret true
+end
+fn solve n:i32 > i32
+mut count i32 0
+mut k i32 2
+while lt k n
+if call is_prime k
+set count add count 1
+end
+set k add k 1
+end
+ret count
+end

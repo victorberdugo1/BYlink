@@ -1,0 +1,15 @@
+byai 1
+module solution
+fn solve n:i64 k:i64 > i64
+mut kk i64 k
+if lt sub n k kk
+set kk sub n k
+end
+mut r i64 1
+mut i i64 1
+while le i kk
+set r div mul r add sub n kk i i
+set i add i 1
+end
+ret r
+end

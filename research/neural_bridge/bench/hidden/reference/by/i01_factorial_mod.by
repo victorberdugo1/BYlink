@@ -1,0 +1,11 @@
+module solution;
+
+fn solve(n: i64, m: i64) -> i64 {
+    let mut r: i64 = 1 % m;
+    let mut i: i64 = 2;
+    while i <= n {
+        r = r * i % m;
+        i = i + 1;
+    }
+    return r;
+}

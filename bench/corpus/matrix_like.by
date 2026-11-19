@@ -1,0 +1,27 @@
+module matrix_like;
+
+const SIZE: i32 = 12;
+
+fn cell(row: i32, col: i32) -> i32 {
+    return (row * 31 + col * 17) % 10;
+}
+
+fn dot(row: i32, col: i32) -> i32 {
+    let mut sum: i32 = 0;
+    let mut k: i32 = 0;
+    while k < SIZE {
+        sum = sum + cell(row, k) * cell(k, col);
+        k = k + 1;
+    }
+    return sum;
+}
+
+fn main() -> i32 {
+    let mut trace: i32 = 0;
+    let mut i: i32 = 0;
+    while i < SIZE {
+        trace = trace + dot(i, i);
+        i = i + 1;
+    }
+    return trace % 256;
+}

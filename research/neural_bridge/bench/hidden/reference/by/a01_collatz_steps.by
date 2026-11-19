@@ -1,0 +1,15 @@
+module solution;
+
+fn solve(n: i64) -> i64 {
+    let mut steps: i64 = 0;
+    let mut x: i64 = n;
+    while x != 1 {
+        if x % 2 == 0 {
+            x = x / 2;
+        } else {
+            x = 3 * x + 1;
+        }
+        steps = steps + 1;
+    }
+    return steps;
+}

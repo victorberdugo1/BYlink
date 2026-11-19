@@ -1,0 +1,11 @@
+module solution;
+
+fn solve(a: i32, b: i32) -> i32 {
+    if b == 0 {
+        return 0;
+    }
+    if a % b == 0 {
+        return 1;
+    }
+    return 0;
+}

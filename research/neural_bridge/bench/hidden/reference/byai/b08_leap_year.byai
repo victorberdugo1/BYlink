@@ -1,0 +1,14 @@
+byai 1
+module solution
+fn solve y:i32 > i32
+if eq rem y 400 0
+ret 1
+end
+if eq rem y 100 0
+ret 0
+end
+if eq rem y 4 0
+ret 1
+end
+ret 0
+end

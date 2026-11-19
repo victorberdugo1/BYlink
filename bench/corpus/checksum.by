@@ -1,0 +1,25 @@
+module checksum;
+
+const ADLER_MOD: u32 = 65521;
+
+fn next_byte(seed: u32) -> u32 {
+    return seed * 1664525 + 1013904223;
+}
+
+fn adler(count: u32) -> u32 {
+    let mut a: u32 = 1;
+    let mut b: u32 = 0;
+    let mut seed: u32 = 12345;
+    let mut i: u32 = 0;
+    while i < count {
+        seed = next_byte(seed);
+        a = (a + (seed / 65536) % 256) % ADLER_MOD;
+        b = (b + a) % ADLER_MOD;
+        i = i + 1;
+    }
+    return b * 65536 + a;
+}
+
+fn main() -> i32 {
+    return (adler(5000) % 256) as i32;
+}

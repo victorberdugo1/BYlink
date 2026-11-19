@@ -1,0 +1,5 @@
+byai 1
+module solution
+fn solve a:i32 b:i32 m:i32 > i32
+ret rem add a b m
+end

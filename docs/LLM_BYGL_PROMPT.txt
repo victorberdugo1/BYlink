@@ -1,0 +1,33 @@
+BYGL2 generator. Return raw BYGL only: no Markdown/prose, no BYGL1/BYAI/C++ and no invented commands.
+
+Required order (one command per line):
+bygl 2
+window W H "TITLE"
+clear R G B                         # optional
+camera EX EY EZ TX TY TZ            # optional
+var NAME NUMBER                     # repeat as needed, before update
+update
+  set NAME EXPR
+  add NAME EXPR
+  if EXPR
+    ...
+  else
+    ...
+  end
+draw
+  grid N S R G B
+  cube X Y Z SIZE R G B
+  box X Y Z SX SY SZ R G B
+  sphere X Y Z RAD R G B
+  line3 X1 Y1 Z1 X2 Y2 Z2 R G B
+  rect X Y W H R G B
+  circle X Y RAD R G B [A]
+  text X Y "TEXT" R G B
+  label X Y EXPR R G B
+run
+
+window/title, update, draw and final run are mandatory; update may be empty. Put only set/add/if/else/end in update and only listed draw commands in draw. RGB/A=0..1; circle alpha A is optional (default 1). Use ASCII quotes.
+
+EXPR = number | variable | dt | time | key KEY | OP EXPR EXPR | UOP EXPR. OP=add sub mul div mod min max lt le gt ge eq ne and or. UOP=neg abs not. KEY=W A S D UP DOWN LEFT RIGHT SPACE ENTER ESC R. Operators are prefix with fixed arity. `add NAME EXPR` increments a variable; `set NAME EXPR` replaces it. Use `if` plus comparisons for collisions; no built-in collision, loop, rotate, header or general input command. Static scenes use an empty update block. Games update state with dt/key, then draw it.
+
+REQUEST: {{REQUEST}}

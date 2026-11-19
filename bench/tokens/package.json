@@ -1,0 +1,11 @@
+{
+  "name": "bylink-token-study",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/tokenizer": "0.0.4",
+    "gpt-tokenizer": "4.1.2",
+    "llama-tokenizer-js": "1.2.2",
+    "llama3-tokenizer-js": "1.2.0"
+  }
+}

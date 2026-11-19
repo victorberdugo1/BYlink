@@ -1,0 +1,8 @@
+byai 1
+module solution
+fn solve n:i32 > i32
+if lt n 2
+ret n
+end
+ret add call solve sub n 1 call solve sub n 2
+end

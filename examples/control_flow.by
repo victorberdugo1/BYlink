@@ -1,0 +1,21 @@
+module control_flow;
+
+fn is_even(n: i32) -> bool {
+    return n % 2 == 0;
+}
+
+fn main() -> i32 {
+    let mut sum: i32 = 0;
+    let mut i: i32 = 0;
+    while i < 20 {
+        i = i + 1;
+        if i == 15 {
+            break;
+        }
+        if !is_even(i) {
+            continue;
+        }
+        sum = sum + i;
+    }
+    return sum;
+}

@@ -1,0 +1,25 @@
+module solution;
+
+fn powmod(b: i64, e: i64, m: i64) -> i64 {
+    let mut result: i64 = 1 % m;
+    let mut base: i64 = b % m;
+    let mut k: i64 = e;
+    while k > 0 {
+        if k % 2 == 1 {
+            result = result * base % m;
+        }
+        base = base * base % m;
+        k = k / 2;
+    }
+    return result;
+}
+
+fn solve(n: i64, e: i64, m: i64) -> i64 {
+    let mut total: i64 = 0;
+    let mut k: i64 = 1;
+    while k <= n {
+        total = (total + powmod(k, e, m)) % m;
+        k = k + 1;
+    }
+    return total;
+}

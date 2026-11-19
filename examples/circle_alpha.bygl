@@ -1,0 +1,9 @@
+bygl 2
+window 640 480 "BYGL Circle Alpha"
+clear 0.02 0.02 0.08
+update
+draw
+circle 220 240 90 0.1 0.6 1.0
+circle 300 240 90 1.0 0.3 0.1 0.55
+text 20 20 "RGB + RGBA CIRCLES" 1 1 1
+run

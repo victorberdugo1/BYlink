@@ -1,0 +1,69 @@
+bygl 2
+window 640 480 "PONG"
+clear 0 0 0
+var bx 320
+var by 240
+var vx 240
+var vy 180
+var pl 200
+var pr 200
+var sl 0
+var sr 0
+update
+set bx add bx mul vx dt
+set by add by mul vy dt
+if key W
+set pl sub pl mul 400 dt
+end
+if key S
+set pl add pl mul 400 dt
+end
+if key UP
+set pr sub pr mul 400 dt
+end
+if key DOWN
+set pr add pr mul 400 dt
+end
+set pl max 0 min 400 pl
+set pr max 0 min 400 pr
+if lt by 8
+set by 8
+set vy abs vy
+end
+if gt by 472
+set by 472
+set vy neg abs vy
+end
+if and lt vx 0 and le bx 30 and ge bx 20 and ge by pl le by add pl 80
+set bx 30
+set vx abs vx
+end
+if and gt vx 0 and ge bx 600 and le bx 620 and ge by pr le by add pr 80
+set bx 600
+set vx neg abs vx
+end
+if lt bx 0
+add sr 1
+set bx 320
+set by 240
+set vx 240
+end
+if gt bx 640
+add sl 1
+set bx 320
+set by 240
+set vx neg 240
+end
+if key R
+set sl 0
+set sr 0
+end
+draw
+rect 318 0 4 480 0.3 0.3 0.3
+rect 20 pl 10 80 1 1 1
+rect 610 pr 10 80 1 1 1
+circle bx by 8 1 1 1
+label 280 20 sl 1 1 1
+label 350 20 sr 1 1 1
+text 20 450 "W/S VS UP/DOWN - R RESET" 0.7 0.7 0.7
+run

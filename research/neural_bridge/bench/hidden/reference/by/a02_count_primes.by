@@ -1,0 +1,27 @@
+module solution;
+
+fn is_prime(n: i32) -> bool {
+    if n < 2 {
+        return false;
+    }
+    let mut d: i32 = 2;
+    while d * d <= n {
+        if n % d == 0 {
+            return false;
+        }
+        d = d + 1;
+    }
+    return true;
+}
+
+fn solve(n: i32) -> i32 {
+    let mut count: i32 = 0;
+    let mut k: i32 = 2;
+    while k < n {
+        if is_prime(k) {
+            count = count + 1;
+        }
+        k = k + 1;
+    }
+    return count;
+}

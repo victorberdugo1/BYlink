@@ -1,0 +1,17 @@
+module functions;
+
+fn add(a: i32, b: i32) -> i32 {
+    return a + b;
+}
+
+fn fib(n: i32) -> i32 {
+    if n < 2 {
+        return n;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
+
+fn main() -> i32 {
+    let result: i32 = add(40, 2);
+    return result + fib(10) - 42;
+}

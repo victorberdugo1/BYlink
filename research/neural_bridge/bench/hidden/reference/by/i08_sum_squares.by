@@ -1,0 +1,15 @@
+module solution;
+
+fn square(x: i32) -> i32 {
+    return x * x;
+}
+
+fn solve(n: i32) -> i32 {
+    let mut total: i32 = 0;
+    let mut i: i32 = 1;
+    while i <= n {
+        total = total + square(i);
+        i = i + 1;
+    }
+    return total;
+}

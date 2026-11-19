@@ -1,0 +1,15 @@
+module solution;
+
+fn solve(n: i64) -> i64 {
+    let mut lo: i64 = 0;
+    let mut hi: i64 = 1000000;
+    while lo < hi {
+        let mid: i64 = (lo + hi + 1) / 2;
+        if mid * mid <= n {
+            lo = mid;
+        } else {
+            hi = mid - 1;
+        }
+    }
+    return lo;
+}

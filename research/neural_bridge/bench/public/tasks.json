@@ -1,0 +1,272 @@
+[
+ {
+  "id": "b01_sum3",
+  "tier": "basic",
+  "family": "arith",
+  "split": "train",
+  "signature": "fn solve(a: i32, b: i32, c: i32) -> i32",
+  "spec": "Return the sum of the three arguments.",
+  "prompt": "Implement `fn solve(a: i32, b: i32, c: i32) -> i32`. Return the sum of the three arguments. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "b02_abs_diff",
+  "tier": "basic",
+  "family": "arith",
+  "split": "train",
+  "signature": "fn solve(a: i32, b: i32) -> i32",
+  "spec": "Return the absolute difference |a - b|. The result always fits in i32.",
+  "prompt": "Implement `fn solve(a: i32, b: i32) -> i32`. Return the absolute difference |a - b|. The result always fits in i32. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "b03_max3",
+  "tier": "basic",
+  "family": "cond",
+  "split": "train",
+  "signature": "fn solve(a: i32, b: i32, c: i32) -> i32",
+  "spec": "Return the largest of the three arguments.",
+  "prompt": "Implement `fn solve(a: i32, b: i32, c: i32) -> i32`. Return the largest of the three arguments. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "b04_clamp",
+  "tier": "basic",
+  "family": "cond",
+  "split": "train",
+  "signature": "fn solve(x: i32, lo: i32, hi: i32) -> i32",
+  "spec": "Clamp x into the closed range [lo, hi]. It is guaranteed that lo <= hi.",
+  "prompt": "Implement `fn solve(x: i32, lo: i32, hi: i32) -> i32`. Clamp x into the closed range [lo, hi]. It is guaranteed that lo <= hi. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "b05_sign",
+  "tier": "basic",
+  "family": "cond",
+  "split": "train",
+  "signature": "fn solve(x: i32) -> i32",
+  "spec": "Return -1 if x is negative, 0 if x is zero, and 1 if x is positive.",
+  "prompt": "Implement `fn solve(x: i32) -> i32`. Return -1 if x is negative, 0 if x is zero, and 1 if x is positive. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "b06_addmod",
+  "tier": "basic",
+  "family": "modular",
+  "split": "test",
+  "signature": "fn solve(a: i32, b: i32, m: i32) -> i32",
+  "spec": "Return (a + b) mod m. Guaranteed 0 <= a < m, 0 <= b < m and m <= 1000000000.",
+  "prompt": "Implement `fn solve(a: i32, b: i32, m: i32) -> i32`. Return (a + b) mod m. Guaranteed 0 <= a < m, 0 <= b < m and m <= 1000000000. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "b07_mul_add",
+  "tier": "basic",
+  "family": "arith",
+  "split": "train",
+  "signature": "fn solve(a: i32, b: i32, c: i32) -> i32",
+  "spec": "Return a * b + c. Guaranteed that no intermediate value overflows i32.",
+  "prompt": "Implement `fn solve(a: i32, b: i32, c: i32) -> i32`. Return a * b + c. Guaranteed that no intermediate value overflows i32. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "b08_leap_year",
+  "tier": "basic",
+  "family": "cond",
+  "split": "train",
+  "signature": "fn solve(y: i32) -> i32",
+  "spec": "Return 1 if year y is a leap year in the Gregorian calendar, otherwise 0. Guaranteed y >= 1.",
+  "prompt": "Implement `fn solve(y: i32) -> i32`. Return 1 if year y is a leap year in the Gregorian calendar, otherwise 0. Guaranteed y >= 1. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "b09_triangular",
+  "tier": "basic",
+  "family": "arith",
+  "split": "train",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return the sum 1 + 2 + ... + n. Guaranteed 0 <= n <= 1000.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return the sum 1 + 2 + ... + n. Guaranteed 0 <= n <= 1000. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "b10_divisible",
+  "tier": "basic",
+  "family": "primes",
+  "split": "test",
+  "signature": "fn solve(a: i32, b: i32) -> i32",
+  "spec": "Return 1 if b is not zero and a is divisible by b, otherwise 0.",
+  "prompt": "Implement `fn solve(a: i32, b: i32) -> i32`. Return 1 if b is not zero and a is divisible by b, otherwise 0. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "i01_factorial_mod",
+  "tier": "intermediate",
+  "family": "loops",
+  "split": "train",
+  "signature": "fn solve(n: i64, m: i64) -> i64",
+  "spec": "Return n! mod m. Guaranteed 0 <= n <= 20 and 1 <= m <= 1000000007. 0! = 1.",
+  "prompt": "Implement `fn solve(n: i64, m: i64) -> i64`. Return n! mod m. Guaranteed 0 <= n <= 20 and 1 <= m <= 1000000007. 0! = 1. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "i02_fib",
+  "tier": "intermediate",
+  "family": "recursion",
+  "split": "val",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return the n-th Fibonacci number with F(0) = 0 and F(1) = 1. Guaranteed 0 <= n <= 25.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return the n-th Fibonacci number with F(0) = 0 and F(1) = 1. Guaranteed 0 <= n <= 25. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "i03_gcd",
+  "tier": "intermediate",
+  "family": "gcd",
+  "split": "test",
+  "signature": "fn solve(a: i32, b: i32) -> i32",
+  "spec": "Return the greatest common divisor of a and b. Guaranteed a >= 0 and b >= 0. gcd(0, 0) = 0.",
+  "prompt": "Implement `fn solve(a: i32, b: i32) -> i32`. Return the greatest common divisor of a and b. Guaranteed a >= 0 and b >= 0. gcd(0, 0) = 0. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "i04_lcm",
+  "tier": "intermediate",
+  "family": "gcd",
+  "split": "test",
+  "signature": "fn solve(a: i32, b: i32) -> i32",
+  "spec": "Return the least common multiple of a and b. Guaranteed a >= 1, b >= 1 and that the result fits in i32.",
+  "prompt": "Implement `fn solve(a: i32, b: i32) -> i32`. Return the least common multiple of a and b. Guaranteed a >= 1, b >= 1 and that the result fits in i32. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "i05_digit_sum",
+  "tier": "intermediate",
+  "family": "digits",
+  "split": "train",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return the sum of the decimal digits of n. Guaranteed n >= 0.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return the sum of the decimal digits of n. Guaranteed n >= 0. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "i06_reverse_digits",
+  "tier": "intermediate",
+  "family": "digits",
+  "split": "train",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return n with its decimal digits reversed (trailing zeros of n vanish). Guaranteed 0 <= n <= 999999999.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return n with its decimal digits reversed (trailing zeros of n vanish). Guaranteed 0 <= n <= 999999999. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "i07_powmod",
+  "tier": "intermediate",
+  "family": "modular",
+  "split": "test",
+  "signature": "fn solve(b: i64, e: i64, m: i64) -> i64",
+  "spec": "Return (b ^ e) mod m. Guaranteed 0 <= b, 0 <= e <= 2000000000, 1 <= m <= 1000000007. Must be fast for large e.",
+  "prompt": "Implement `fn solve(b: i64, e: i64, m: i64) -> i64`. Return (b ^ e) mod m. Guaranteed 0 <= b, 0 <= e <= 2000000000, 1 <= m <= 1000000007. Must be fast for large e. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "i08_sum_squares",
+  "tier": "intermediate",
+  "family": "loops",
+  "split": "train",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return 1*1 + 2*2 + ... + n*n. Guaranteed 0 <= n <= 1000.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return 1*1 + 2*2 + ... + n*n. Guaranteed 0 <= n <= 1000. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "i09_count_divisors",
+  "tier": "intermediate",
+  "family": "divisors",
+  "split": "val",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return the number of positive divisors of n. Guaranteed 1 <= n <= 10000.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return the number of positive divisors of n. Guaranteed 1 <= n <= 10000. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "i10_is_prime",
+  "tier": "intermediate",
+  "family": "primes",
+  "split": "test",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return 1 if n is prime, otherwise 0. Guaranteed 0 <= n <= 1000000.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return 1 if n is prime, otherwise 0. Guaranteed 0 <= n <= 1000000. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "a01_collatz_steps",
+  "tier": "advanced",
+  "family": "collatz",
+  "split": "test",
+  "signature": "fn solve(n: i64) -> i64",
+  "spec": "Return the number of steps for n to reach 1 under the Collatz rule (even: n/2, odd: 3n+1). Guaranteed 1 <= n <= 1000000; return 0 for n = 1.",
+  "prompt": "Implement `fn solve(n: i64) -> i64`. Return the number of steps for n to reach 1 under the Collatz rule (even: n/2, odd: 3n+1). Guaranteed 1 <= n <= 1000000; return 0 for n = 1. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "a02_count_primes",
+  "tier": "advanced",
+  "family": "primes",
+  "split": "test",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return the number of primes strictly less than n. Guaranteed 0 <= n <= 20000.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return the number of primes strictly less than n. Guaranteed 0 <= n <= 20000. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "a03_isqrt",
+  "tier": "advanced",
+  "family": "numeric",
+  "split": "val",
+  "signature": "fn solve(n: i64) -> i64",
+  "spec": "Return floor(sqrt(n)) for 0 <= n <= 1000000000000. Floating point does not exist; a linear search is too slow.",
+  "prompt": "Implement `fn solve(n: i64) -> i64`. Return floor(sqrt(n)) for 0 <= n <= 1000000000000. Floating point does not exist; a linear search is too slow. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "a04_power_sum",
+  "tier": "advanced",
+  "family": "modular",
+  "split": "test",
+  "signature": "fn solve(n: i64, e: i64, m: i64) -> i64",
+  "spec": "Return (1^e + 2^e + ... + n^e) mod m. Guaranteed 1 <= n <= 1000, 0 <= e <= 2000000000, 1 <= m <= 1000000007. Must be fast for large e.",
+  "prompt": "Implement `fn solve(n: i64, e: i64, m: i64) -> i64`. Return (1^e + 2^e + ... + n^e) mod m. Guaranteed 1 <= n <= 1000, 0 <= e <= 2000000000, 1 <= m <= 1000000007. Must be fast for large e. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "a05_ackermann",
+  "tier": "advanced",
+  "family": "recursion",
+  "split": "val",
+  "signature": "fn solve(m: i32, n: i32) -> i32",
+  "spec": "Return the Ackermann function A(m, n): A(0,n)=n+1; A(m,0)=A(m-1,1) for m>0; A(m,n)=A(m-1,A(m,n-1)) for m>0,n>0. Guaranteed 0 <= m <= 3 and 0 <= n <= 6.",
+  "prompt": "Implement `fn solve(m: i32, n: i32) -> i32`. Return the Ackermann function A(m, n): A(0,n)=n+1; A(m,0)=A(m-1,1) for m>0; A(m,n)=A(m-1,A(m,n-1)) for m>0,n>0. Guaranteed 0 <= m <= 3 and 0 <= n <= 6. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "a06_count_perfect",
+  "tier": "advanced",
+  "family": "divisors",
+  "split": "val",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return how many perfect numbers lie in [1, n] (a perfect number equals the sum of its proper positive divisors). Guaranteed 1 <= n <= 3000.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return how many perfect numbers lie in [1, n] (a perfect number equals the sum of its proper positive divisors). Guaranteed 1 <= n <= 3000. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "a07_palindrome_count",
+  "tier": "advanced",
+  "family": "digits",
+  "split": "train",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return how many integers k with 1 <= k <= n read the same forwards and backwards in decimal. Guaranteed 1 <= n <= 100000.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return how many integers k with 1 <= k <= n read the same forwards and backwards in decimal. Guaranteed 1 <= n <= 100000. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "a08_binomial",
+  "tier": "advanced",
+  "family": "combinatorics",
+  "split": "test",
+  "signature": "fn solve(n: i64, k: i64) -> i64",
+  "spec": "Return the binomial coefficient C(n, k). Guaranteed 0 <= k <= n <= 30. The result fits in i64.",
+  "prompt": "Implement `fn solve(n: i64, k: i64) -> i64`. Return the binomial coefficient C(n, k). Guaranteed 0 <= k <= n <= 30. The result fits in i64. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "a09_lcm_range",
+  "tier": "advanced",
+  "family": "gcd",
+  "split": "test",
+  "signature": "fn solve(n: i64, m: i64) -> i64",
+  "spec": "Return lcm(1, 2, ..., n) mod m. Guaranteed 1 <= n <= 40 and 1 <= m <= 1000000007. The exact lcm fits in i64.",
+  "prompt": "Implement `fn solve(n: i64, m: i64) -> i64`. Return lcm(1, 2, ..., n) mod m. Guaranteed 1 <= n <= 40 and 1 <= m <= 1000000007. The exact lcm fits in i64. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ },
+ {
+  "id": "a10_totient",
+  "tier": "advanced",
+  "family": "numeric",
+  "split": "val",
+  "signature": "fn solve(n: i32) -> i32",
+  "spec": "Return Euler's totient phi(n): the count of integers k in [1, n] with gcd(k, n) = 1. Guaranteed 1 <= n <= 1000000.",
+  "prompt": "Implement `fn solve(n: i32) -> i32`. Return Euler's totient phi(n): the count of integers k in [1, n] with gcd(k, n) = 1. Guaranteed 1 <= n <= 1000000. Define only helper functions and `solve`; do not define `main`. Report nothing else: there is no I/O."
+ }
+]

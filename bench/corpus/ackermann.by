@@ -1,0 +1,33 @@
+module ackermann;
+
+fn ack(m: i32, n: i32) -> i32 {
+    if m == 0 {
+        return n + 1;
+    }
+    if n == 0 {
+        return ack(m - 1, 1);
+    }
+    return ack(m - 1, ack(m, n - 1));
+}
+
+fn is_even(n: i32) -> bool {
+    if n == 0 {
+        return true;
+    }
+    return is_odd(n - 1);
+}
+
+fn is_odd(n: i32) -> bool {
+    if n == 0 {
+        return false;
+    }
+    return is_even(n - 1);
+}
+
+fn main() -> i32 {
+    let a: i32 = ack(2, 3);
+    if is_even(a) {
+        return 0;
+    }
+    return a;
+}

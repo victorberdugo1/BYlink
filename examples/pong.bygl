@@ -1,0 +1,95 @@
+bygl 2
+window 1280 720 "PONG 3D"
+clear 0.02 0.02 0.08
+camera 0 8 12 0 0 0
+var bx 0
+var bz 0
+var vx 4
+var vz 2
+var lp 0
+var rp 0
+var leftScore 0
+var rightScore 0
+update
+if key R
+set bx 0
+set bz 0
+set vx 4
+set vz 2
+set lp 0
+set rp 0
+set leftScore 0
+set rightScore 0
+end
+if key W
+add lp mul -5 dt
+end
+if key S
+add lp mul 5 dt
+end
+if key UP
+add rp mul -5 dt
+end
+if key DOWN
+add rp mul 5 dt
+end
+if lt lp -3
+set lp -3
+end
+if gt lp 3
+set lp 3
+end
+if lt rp -3
+set rp -3
+end
+if gt rp 3
+set rp 3
+end
+set bx add bx mul vx dt
+set bz add bz mul vz dt
+if gt bz 3.6
+set bz 3.6
+set vz neg abs vz
+end
+if lt bz -3.6
+set bz -3.6
+set vz abs vz
+end
+if and lt vx 0 and lt bx -5.65 and gt bx -6.1 lt abs sub bz lp 0.9
+set vx abs vx
+add vz mul sub bz lp 1.5
+end
+if and gt vx 0 and gt bx 5.65 and lt bx 6.1 lt abs sub bz rp 0.9
+set vx neg abs vx
+add vz mul sub bz rp 1.5
+end
+if gt bx 7.2
+add leftScore 1
+set bx 0
+set bz 0
+set vx -4
+set vz 2
+end
+if lt bx -7.2
+add rightScore 1
+set bx 0
+set bz 0
+set vx 4
+set vz -2
+end
+draw
+grid 14 1 0.12 0.18 0.24
+line3 -7 0 -4 7 0 -4 0.65 0.75 0.9
+line3 7 0 -4 7 0 4 0.65 0.75 0.9
+line3 7 0 4 -7 0 4 0.65 0.75 0.9
+line3 -7 0 4 -7 0 -4 0.65 0.75 0.9
+line3 0 0 -4 0 0 4 0.4 0.5 0.7
+box -6 0.45 lp 0.35 0.9 1.4 0.2 0.65 1
+box 6 0.45 rp 0.35 0.9 1.4 1 0.35 0.2
+sphere bx 0.45 bz 0.25 1 0.85 0.2
+text 20 20 "PONG 3D - W/S vs ARROWS" 0.65 0.85 1
+label 590 22 leftScore 1 1 1
+text 620 22 ":" 1 1 1
+label 650 22 rightScore 1 1 1
+text 20 690 "ESC TO QUIT" 0.55 0.65 0.8
+run

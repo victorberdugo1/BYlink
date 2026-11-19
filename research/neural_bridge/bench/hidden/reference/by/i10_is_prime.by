@@ -1,0 +1,15 @@
+module solution;
+
+fn solve(n: i32) -> i32 {
+    if n < 2 {
+        return 0;
+    }
+    let mut d: i32 = 2;
+    while d * d <= n {
+        if n % d == 0 {
+            return 0;
+        }
+        d = d + 1;
+    }
+    return 1;
+}

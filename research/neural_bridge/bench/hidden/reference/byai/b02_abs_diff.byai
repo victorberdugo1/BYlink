@@ -1,0 +1,8 @@
+byai 1
+module solution
+fn solve a:i32 b:i32 > i32
+if gt a b
+ret sub a b
+end
+ret sub b a
+end

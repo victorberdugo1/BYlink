@@ -1,0 +1,15 @@
+module solution;
+
+fn solve(n: i64, k: i64) -> i64 {
+    let mut kk: i64 = k;
+    if n - k < kk {
+        kk = n - k;
+    }
+    let mut r: i64 = 1;
+    let mut i: i64 = 1;
+    while i <= kk {
+        r = r * (n - kk + i) / i;
+        i = i + 1;
+    }
+    return r;
+}

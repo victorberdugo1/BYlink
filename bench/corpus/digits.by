@@ -1,0 +1,37 @@
+module digits;
+
+fn digit_sum(n: i32) -> i32 {
+    let mut v: i32 = n;
+    let mut s: i32 = 0;
+    while v > 0 {
+        s = s + v % 10;
+        v = v / 10;
+    }
+    return s;
+}
+
+fn reverse(n: i32) -> i32 {
+    let mut v: i32 = n;
+    let mut r: i32 = 0;
+    while v > 0 {
+        r = r * 10 + v % 10;
+        v = v / 10;
+    }
+    return r;
+}
+
+fn is_palindrome(n: i32) -> bool {
+    return reverse(n) == n;
+}
+
+fn main() -> i32 {
+    let mut found: i32 = 0;
+    let mut n: i32 = 100;
+    while n < 1000 {
+        if is_palindrome(n) && digit_sum(n) % 2 == 0 {
+            found = found + 1;
+        }
+        n = n + 1;
+    }
+    return found;
+}

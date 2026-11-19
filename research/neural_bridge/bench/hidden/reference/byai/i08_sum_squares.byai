@@ -1,0 +1,14 @@
+byai 1
+module solution
+fn square x:i32 > i32
+ret mul x x
+end
+fn solve n:i32 > i32
+mut total i32 0
+mut i i32 1
+while le i n
+set total add total call square i
+set i add i 1
+end
+ret total
+end

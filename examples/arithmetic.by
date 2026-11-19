@@ -1,0 +1,11 @@
+module arithmetic;
+
+const BASE: i32 = 6 * 7;
+
+fn main() -> i32 {
+    let a: i32 = BASE;
+    let b: i32 = 100;
+    let c: i64 = (a as i64) * 1000000i64;
+    let d: u8 = 250u8 + 10u8;
+    return (b - a) % 10 + (c / 1000000i64) as i32 + d as i32;
+}

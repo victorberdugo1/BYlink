@@ -1,0 +1,11 @@
+byai 1
+module solution
+fn solve n:i32 > i32
+mut r i32 0
+mut x i32 n
+while gt x 0
+set r add mul r 10 rem x 10
+set x div x 10
+end
+ret r
+end

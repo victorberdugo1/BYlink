@@ -1,0 +1,11 @@
+byai 1
+module solution
+fn solve n:i64 m:i64 > i64
+mut r i64 rem 1 m
+mut i i64 2
+while le i n
+set r rem mul r i m
+set i add i 1
+end
+ret r
+end

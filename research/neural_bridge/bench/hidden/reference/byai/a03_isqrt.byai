@@ -1,0 +1,15 @@
+byai 1
+module solution
+fn solve n:i64 > i64
+mut lo i64 0
+mut hi i64 1000000
+while lt lo hi
+let mid i64 div add add lo hi 1 2
+if le mul mid mid n
+set lo mid
+else
+set hi sub mid 1
+end
+end
+ret lo
+end

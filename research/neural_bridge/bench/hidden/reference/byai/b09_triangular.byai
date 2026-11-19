@@ -1,0 +1,5 @@
+byai 1
+module solution
+fn solve n:i32 > i32
+ret div mul n add n 1 2
+end

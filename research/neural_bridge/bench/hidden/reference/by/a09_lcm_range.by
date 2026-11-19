@@ -1,0 +1,18 @@
+module solution;
+
+fn gcd(a: i64, b: i64) -> i64 {
+    if b == 0 {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+fn solve(n: i64, m: i64) -> i64 {
+    let mut l: i64 = 1;
+    let mut i: i64 = 2;
+    while i <= n {
+        l = l / gcd(l, i) * i;
+        i = i + 1;
+    }
+    return l % m;
+}

@@ -1,0 +1,13 @@
+byai 1
+module solution
+fn solve n:i32 > i32
+mut count i32 0
+mut d i32 1
+while le d n
+if eq rem n d 0
+set count add count 1
+end
+set d add d 1
+end
+ret count
+end

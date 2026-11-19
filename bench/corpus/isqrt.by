@@ -1,0 +1,25 @@
+module isqrt;
+
+fn isqrt(n: u32) -> u32 {
+    let mut lo: u64 = 0;
+    let mut hi: u64 = (n as u64) + 1;
+    while hi - lo > 1 {
+        let mid: u64 = (lo + hi) / 2;
+        if mid * mid <= (n as u64) {
+            lo = mid;
+        } else {
+            hi = mid;
+        }
+    }
+    return lo as u32;
+}
+
+fn main() -> i32 {
+    let mut total: u32 = 0;
+    let mut i: u32 = 0;
+    while i < 500 {
+        total = total + isqrt(i * 997);
+        i = i + 1;
+    }
+    return (total % 256) as i32;
+}

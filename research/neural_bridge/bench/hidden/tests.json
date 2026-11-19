@@ -1,0 +1,1364 @@
+[
+ {
+  "id": "b01_sum3",
+  "tests": [
+   {
+    "args": [
+     1,
+     2,
+     3
+    ],
+    "expected": 6
+   },
+   {
+    "args": [
+     0,
+     0,
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     -5,
+     10,
+     2
+    ],
+    "expected": 7
+   },
+   {
+    "args": [
+     1000,
+     2000,
+     3000
+    ],
+    "expected": 6000
+   },
+   {
+    "args": [
+     -7,
+     -8,
+     -9
+    ],
+    "expected": -24
+   },
+   {
+    "args": [
+     2147483000,
+     -1000,
+     500
+    ],
+    "expected": 2147482500
+   }
+  ]
+ },
+ {
+  "id": "b02_abs_diff",
+  "tests": [
+   {
+    "args": [
+     5,
+     3
+    ],
+    "expected": 2
+   },
+   {
+    "args": [
+     3,
+     5
+    ],
+    "expected": 2
+   },
+   {
+    "args": [
+     0,
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     -4,
+     6
+    ],
+    "expected": 10
+   },
+   {
+    "args": [
+     6,
+     -4
+    ],
+    "expected": 10
+   },
+   {
+    "args": [
+     1000000,
+     -1000000
+    ],
+    "expected": 2000000
+   }
+  ]
+ },
+ {
+  "id": "b03_max3",
+  "tests": [
+   {
+    "args": [
+     1,
+     2,
+     3
+    ],
+    "expected": 3
+   },
+   {
+    "args": [
+     3,
+     2,
+     1
+    ],
+    "expected": 3
+   },
+   {
+    "args": [
+     2,
+     3,
+     1
+    ],
+    "expected": 3
+   },
+   {
+    "args": [
+     -1,
+     -2,
+     -3
+    ],
+    "expected": -1
+   },
+   {
+    "args": [
+     5,
+     5,
+     5
+    ],
+    "expected": 5
+   },
+   {
+    "args": [
+     0,
+     -7,
+     -7
+    ],
+    "expected": 0
+   }
+  ]
+ },
+ {
+  "id": "b04_clamp",
+  "tests": [
+   {
+    "args": [
+     5,
+     0,
+     10
+    ],
+    "expected": 5
+   },
+   {
+    "args": [
+     -5,
+     0,
+     10
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     15,
+     0,
+     10
+    ],
+    "expected": 10
+   },
+   {
+    "args": [
+     0,
+     0,
+     10
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     10,
+     0,
+     10
+    ],
+    "expected": 10
+   },
+   {
+    "args": [
+     7,
+     7,
+     7
+    ],
+    "expected": 7
+   }
+  ]
+ },
+ {
+  "id": "b05_sign",
+  "tests": [
+   {
+    "args": [
+     5
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     -5
+    ],
+    "expected": -1
+   },
+   {
+    "args": [
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     1
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     -1
+    ],
+    "expected": -1
+   },
+   {
+    "args": [
+     2000000000
+    ],
+    "expected": 1
+   }
+  ]
+ },
+ {
+  "id": "b06_addmod",
+  "tests": [
+   {
+    "args": [
+     3,
+     4,
+     5
+    ],
+    "expected": 2
+   },
+   {
+    "args": [
+     0,
+     0,
+     1
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     999999999,
+     999999999,
+     1000000000
+    ],
+    "expected": 999999998
+   },
+   {
+    "args": [
+     10,
+     20,
+     31
+    ],
+    "expected": 30
+   },
+   {
+    "args": [
+     0,
+     5,
+     7
+    ],
+    "expected": 5
+   },
+   {
+    "args": [
+     6,
+     6,
+     7
+    ],
+    "expected": 5
+   }
+  ]
+ },
+ {
+  "id": "b07_mul_add",
+  "tests": [
+   {
+    "args": [
+     2,
+     3,
+     4
+    ],
+    "expected": 10
+   },
+   {
+    "args": [
+     0,
+     5,
+     6
+    ],
+    "expected": 6
+   },
+   {
+    "args": [
+     -3,
+     4,
+     5
+    ],
+    "expected": -7
+   },
+   {
+    "args": [
+     1000,
+     1000,
+     1
+    ],
+    "expected": 1000001
+   },
+   {
+    "args": [
+     46340,
+     46340,
+     0
+    ],
+    "expected": 2147395600
+   },
+   {
+    "args": [
+     -7,
+     -7,
+     -7
+    ],
+    "expected": 42
+   }
+  ]
+ },
+ {
+  "id": "b08_leap_year",
+  "tests": [
+   {
+    "args": [
+     2000
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     1900
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     2024
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     2023
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     1600
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     2100
+    ],
+    "expected": 0
+   }
+  ]
+ },
+ {
+  "id": "b09_triangular",
+  "tests": [
+   {
+    "args": [
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     1
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     5
+    ],
+    "expected": 15
+   },
+   {
+    "args": [
+     10
+    ],
+    "expected": 55
+   },
+   {
+    "args": [
+     100
+    ],
+    "expected": 5050
+   },
+   {
+    "args": [
+     1000
+    ],
+    "expected": 500500
+   }
+  ]
+ },
+ {
+  "id": "b10_divisible",
+  "tests": [
+   {
+    "args": [
+     10,
+     5
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     10,
+     3
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     0,
+     7
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     7,
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     -9,
+     3
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     2147483647,
+     1
+    ],
+    "expected": 1
+   }
+  ]
+ },
+ {
+  "id": "i01_factorial_mod",
+  "tests": [
+   {
+    "args": [
+     0,
+     7
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     5,
+     1000
+    ],
+    "expected": 120
+   },
+   {
+    "args": [
+     10,
+     1000000007
+    ],
+    "expected": 3628800
+   },
+   {
+    "args": [
+     20,
+     998244353
+    ],
+    "expected": 401576539
+   },
+   {
+    "args": [
+     1,
+     1
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     15,
+     97
+    ],
+    "expected": 53
+   }
+  ]
+ },
+ {
+  "id": "i02_fib",
+  "tests": [
+   {
+    "args": [
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     1
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     2
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     10
+    ],
+    "expected": 55
+   },
+   {
+    "args": [
+     20
+    ],
+    "expected": 6765
+   },
+   {
+    "args": [
+     25
+    ],
+    "expected": 75025
+   }
+  ]
+ },
+ {
+  "id": "i03_gcd",
+  "tests": [
+   {
+    "args": [
+     12,
+     18
+    ],
+    "expected": 6
+   },
+   {
+    "args": [
+     17,
+     5
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     0,
+     9
+    ],
+    "expected": 9
+   },
+   {
+    "args": [
+     9,
+     0
+    ],
+    "expected": 9
+   },
+   {
+    "args": [
+     0,
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     1071,
+     462
+    ],
+    "expected": 21
+   }
+  ]
+ },
+ {
+  "id": "i04_lcm",
+  "tests": [
+   {
+    "args": [
+     4,
+     6
+    ],
+    "expected": 12
+   },
+   {
+    "args": [
+     7,
+     13
+    ],
+    "expected": 91
+   },
+   {
+    "args": [
+     1,
+     1
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     21,
+     6
+    ],
+    "expected": 42
+   },
+   {
+    "args": [
+     100,
+     75
+    ],
+    "expected": 300
+   },
+   {
+    "args": [
+     30,
+     42
+    ],
+    "expected": 210
+   }
+  ]
+ },
+ {
+  "id": "i05_digit_sum",
+  "tests": [
+   {
+    "args": [
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     7
+    ],
+    "expected": 7
+   },
+   {
+    "args": [
+     123
+    ],
+    "expected": 6
+   },
+   {
+    "args": [
+     9999
+    ],
+    "expected": 36
+   },
+   {
+    "args": [
+     1000000000
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     987654321
+    ],
+    "expected": 45
+   }
+  ]
+ },
+ {
+  "id": "i06_reverse_digits",
+  "tests": [
+   {
+    "args": [
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     5
+    ],
+    "expected": 5
+   },
+   {
+    "args": [
+     120
+    ],
+    "expected": 21
+   },
+   {
+    "args": [
+     1234
+    ],
+    "expected": 4321
+   },
+   {
+    "args": [
+     100000
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     987654321
+    ],
+    "expected": 123456789
+   }
+  ]
+ },
+ {
+  "id": "i07_powmod",
+  "tests": [
+   {
+    "args": [
+     2,
+     10,
+     1000
+    ],
+    "expected": 24
+   },
+   {
+    "args": [
+     3,
+     0,
+     7
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     0,
+     5,
+     13
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     7,
+     123456789,
+     1000000007
+    ],
+    "expected": 467332791
+   },
+   {
+    "args": [
+     2,
+     1000000000,
+     998244353
+    ],
+    "expected": 851104391
+   },
+   {
+    "args": [
+     10,
+     18,
+     1000000007
+    ],
+    "expected": 49
+   }
+  ]
+ },
+ {
+  "id": "i08_sum_squares",
+  "tests": [
+   {
+    "args": [
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     1
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     2
+    ],
+    "expected": 5
+   },
+   {
+    "args": [
+     10
+    ],
+    "expected": 385
+   },
+   {
+    "args": [
+     100
+    ],
+    "expected": 338350
+   },
+   {
+    "args": [
+     1000
+    ],
+    "expected": 333833500
+   }
+  ]
+ },
+ {
+  "id": "i09_count_divisors",
+  "tests": [
+   {
+    "args": [
+     1
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     2
+    ],
+    "expected": 2
+   },
+   {
+    "args": [
+     12
+    ],
+    "expected": 6
+   },
+   {
+    "args": [
+     97
+    ],
+    "expected": 2
+   },
+   {
+    "args": [
+     360
+    ],
+    "expected": 24
+   },
+   {
+    "args": [
+     10000
+    ],
+    "expected": 25
+   }
+  ]
+ },
+ {
+  "id": "i10_is_prime",
+  "tests": [
+   {
+    "args": [
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     1
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     97
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     91
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     561
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     999983
+    ],
+    "expected": 1
+   }
+  ]
+ },
+ {
+  "id": "a01_collatz_steps",
+  "tests": [
+   {
+    "args": [
+     1
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     2
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     7
+    ],
+    "expected": 16
+   },
+   {
+    "args": [
+     27
+    ],
+    "expected": 111
+   },
+   {
+    "args": [
+     97
+    ],
+    "expected": 118
+   },
+   {
+    "args": [
+     837799
+    ],
+    "expected": 524
+   }
+  ]
+ },
+ {
+  "id": "a02_count_primes",
+  "tests": [
+   {
+    "args": [
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     2
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     3
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     10
+    ],
+    "expected": 4
+   },
+   {
+    "args": [
+     100
+    ],
+    "expected": 25
+   },
+   {
+    "args": [
+     20000
+    ],
+    "expected": 2262
+   }
+  ]
+ },
+ {
+  "id": "a03_isqrt",
+  "tests": [
+   {
+    "args": [
+     0
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     1
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     15
+    ],
+    "expected": 3
+   },
+   {
+    "args": [
+     16
+    ],
+    "expected": 4
+   },
+   {
+    "args": [
+     999999999999
+    ],
+    "expected": 999999
+   },
+   {
+    "args": [
+     1000000000000
+    ],
+    "expected": 1000000
+   }
+  ]
+ },
+ {
+  "id": "a04_power_sum",
+  "tests": [
+   {
+    "args": [
+     1,
+     5,
+     7
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     3,
+     2,
+     1000
+    ],
+    "expected": 14
+   },
+   {
+    "args": [
+     10,
+     3,
+     1000000007
+    ],
+    "expected": 3025
+   },
+   {
+    "args": [
+     100,
+     1000000000,
+     998244353
+    ],
+    "expected": 635033796
+   },
+   {
+    "args": [
+     1000,
+     123456789,
+     1000000007
+    ],
+    "expected": 270512869
+   },
+   {
+    "args": [
+     5,
+     0,
+     13
+    ],
+    "expected": 5
+   }
+  ]
+ },
+ {
+  "id": "a05_ackermann",
+  "tests": [
+   {
+    "args": [
+     0,
+     0
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     1,
+     5
+    ],
+    "expected": 7
+   },
+   {
+    "args": [
+     2,
+     3
+    ],
+    "expected": 9
+   },
+   {
+    "args": [
+     3,
+     0
+    ],
+    "expected": 5
+   },
+   {
+    "args": [
+     3,
+     3
+    ],
+    "expected": 61
+   },
+   {
+    "args": [
+     3,
+     6
+    ],
+    "expected": 509
+   }
+  ]
+ },
+ {
+  "id": "a06_count_perfect",
+  "tests": [
+   {
+    "args": [
+     5
+    ],
+    "expected": 0
+   },
+   {
+    "args": [
+     6
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     27
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     28
+    ],
+    "expected": 2
+   },
+   {
+    "args": [
+     500
+    ],
+    "expected": 3
+   },
+   {
+    "args": [
+     3000
+    ],
+    "expected": 3
+   }
+  ]
+ },
+ {
+  "id": "a07_palindrome_count",
+  "tests": [
+   {
+    "args": [
+     9
+    ],
+    "expected": 9
+   },
+   {
+    "args": [
+     10
+    ],
+    "expected": 9
+   },
+   {
+    "args": [
+     100
+    ],
+    "expected": 18
+   },
+   {
+    "args": [
+     1000
+    ],
+    "expected": 108
+   },
+   {
+    "args": [
+     12345
+    ],
+    "expected": 222
+   },
+   {
+    "args": [
+     100000
+    ],
+    "expected": 1098
+   }
+  ]
+ },
+ {
+  "id": "a08_binomial",
+  "tests": [
+   {
+    "args": [
+     5,
+     2
+    ],
+    "expected": 10
+   },
+   {
+    "args": [
+     10,
+     0
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     10,
+     10
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     30,
+     15
+    ],
+    "expected": 155117520
+   },
+   {
+    "args": [
+     20,
+     3
+    ],
+    "expected": 1140
+   },
+   {
+    "args": [
+     30,
+     29
+    ],
+    "expected": 30
+   }
+  ]
+ },
+ {
+  "id": "a09_lcm_range",
+  "tests": [
+   {
+    "args": [
+     1,
+     1000
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     10,
+     1000000007
+    ],
+    "expected": 2520
+   },
+   {
+    "args": [
+     20,
+     1000
+    ],
+    "expected": 560
+   },
+   {
+    "args": [
+     40,
+     1000000007
+    ],
+    "expected": 419662683
+   },
+   {
+    "args": [
+     40,
+     97
+    ],
+    "expected": 67
+   },
+   {
+    "args": [
+     7,
+     13
+    ],
+    "expected": 4
+   }
+  ]
+ },
+ {
+  "id": "a10_totient",
+  "tests": [
+   {
+    "args": [
+     1
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     2
+    ],
+    "expected": 1
+   },
+   {
+    "args": [
+     36
+    ],
+    "expected": 12
+   },
+   {
+    "args": [
+     97
+    ],
+    "expected": 96
+   },
+   {
+    "args": [
+     100000
+    ],
+    "expected": 40000
+   },
+   {
+    "args": [
+     999999
+    ],
+    "expected": 466560
+   }
+  ]
+ }
+]

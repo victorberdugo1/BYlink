@@ -1,0 +1,17 @@
+byai 1
+module solution
+fn gcd a:i64 b:i64 > i64
+if eq b 0
+ret a
+end
+ret call gcd b rem a b
+end
+fn solve n:i64 m:i64 > i64
+mut l i64 1
+mut i i64 2
+while le i n
+set l mul div l call gcd l i i
+set i add i 1
+end
+ret rem l m
+end

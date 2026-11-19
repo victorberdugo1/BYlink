@@ -1,0 +1,11 @@
+module solution;
+
+fn solve(n: i32) -> i32 {
+    let mut s: i32 = 0;
+    let mut x: i32 = n;
+    while x > 0 {
+        s = s + x % 10;
+        x = x / 10;
+    }
+    return s;
+}

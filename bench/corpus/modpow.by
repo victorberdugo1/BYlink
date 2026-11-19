@@ -1,0 +1,26 @@
+module modpow;
+
+const MODULUS: u64 = 1000003;
+
+fn mul_mod(a: u64, b: u64) -> u64 {
+    return (a * b) % MODULUS;
+}
+
+fn pow_mod(base: u64, exp: u64) -> u64 {
+    let mut result: u64 = 1;
+    let mut b: u64 = base % MODULUS;
+    let mut e: u64 = exp;
+    while e > 0 {
+        if e % 2 == 1 {
+            result = mul_mod(result, b);
+        }
+        b = mul_mod(b, b);
+        e = e / 2;
+    }
+    return result;
+}
+
+fn main() -> i32 {
+    let r: u64 = pow_mod(7, 123456);
+    return (r % 251) as i32;
+}

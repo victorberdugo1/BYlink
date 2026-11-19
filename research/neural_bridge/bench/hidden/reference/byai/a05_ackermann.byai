@@ -1,0 +1,11 @@
+byai 1
+module solution
+fn solve m:i32 n:i32 > i32
+if eq m 0
+ret add n 1
+end
+if eq n 0
+ret call solve sub m 1 1
+end
+ret call solve sub m 1 call solve m sub n 1
+end

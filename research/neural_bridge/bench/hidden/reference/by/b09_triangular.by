@@ -1,0 +1,5 @@
+module solution;
+
+fn solve(n: i32) -> i32 {
+    return n * (n + 1) / 2;
+}

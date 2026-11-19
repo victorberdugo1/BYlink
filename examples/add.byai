@@ -1,0 +1,5 @@
+byai 1
+module add
+fn main > i32
+ret add 1 1
+end

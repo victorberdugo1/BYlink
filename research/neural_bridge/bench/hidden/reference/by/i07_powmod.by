@@ -1,0 +1,15 @@
+module solution;
+
+fn solve(b: i64, e: i64, m: i64) -> i64 {
+    let mut result: i64 = 1 % m;
+    let mut base: i64 = b % m;
+    let mut k: i64 = e;
+    while k > 0 {
+        if k % 2 == 1 {
+            result = result * base % m;
+        }
+        base = base * base % m;
+        k = k / 2;
+    }
+    return result;
+}
